@@ -61,3 +61,12 @@ curl -X POST localhost:4242/refund \
 - Add authentication to `/refund`
 - Switch to live keys only after testing
 - Serve over HTTPS
+
+## Website
+
+The marketing site for **Ironclad Payments** lives in [`website/index.html`](website/index.html). It's a single self-contained file: open it in a browser, or deploy the `website/` folder to any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages).
+
+Before launch:
+- Set your real rates in the `PRICING` object at the bottom of `website/index.html`
+- Point `APPLY_ENDPOINT` at your backend or a form service (e.g. Formspree) so applications reach you
+- Make sure every claim on the page (licensed partners, decision times, supported verticals) is true for your setup
