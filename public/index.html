@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <main>
+    <h1>Pay by card</h1>
+
+    <form id="amount-form">
+      <label for="amount">Amount (USD)</label>
+      <input id="amount" type="number" min="0.50" step="0.01" value="10.00" required />
+      <button type="submit">Continue</button>
+    </form>
+
+    <form id="payment-form" hidden>
+      <div id="payment-element"></div>
+      <button id="pay-button" type="submit">Pay</button>
+    </form>
+
+    <div id="message" role="status"></div>
+  </main>
+  <script src="checkout.js"></script>
+</body>
+</html>
